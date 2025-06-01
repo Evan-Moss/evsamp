@@ -1,5 +1,3 @@
-import type { Schema } from "@/amplify/data/resource";
-import outputs from "@/amplify_outputs.json";
 import { CurrentyPlayingCard } from "@/components/card-components/currently-playing-card";
 import { ModeToggle } from "@/components/mode-toggle";
 import { CurrentyPlayingCardStates, PlayIndicatorStatus } from "@/types/types";
@@ -7,9 +5,6 @@ import { Amplify } from "aws-amplify";
 import { generateClient } from "aws-amplify/data";
 import "./../app/globals.css";
 
-Amplify.configure(outputs);
-
-const client = generateClient<Schema>();
 
 export default function App() {
   return (
